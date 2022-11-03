@@ -16,5 +16,12 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+@import "./../styles/theme";
+
+    .home  {
+        background-color: $dark-blue;
+        min-height: 100vh;
+        width:  100vw;
+    }
 </style>
