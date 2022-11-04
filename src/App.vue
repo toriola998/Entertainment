@@ -1,16 +1,16 @@
 <template>
-  <router-view/>
+    <router-view/>
 </template>
 
 <style lang="scss">
-@import "./styles/main";
     * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
     }
 
-    button {
+    button,
+    input {
         background: none;
         //outline: 1px dashed $red;
         border: 0;

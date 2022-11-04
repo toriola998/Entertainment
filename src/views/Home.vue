@@ -1,6 +1,10 @@
 <template>
     <div class="home"> 
         <TheNavBar />
+        <div class="input-wrap">
+            <img src="" alt="" role="presentation" />
+            <input placeholder="Search for movies or TV series" type="text"/>
+        </div>
     </div>
 </template>
 
@@ -17,7 +21,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/main";
+// @import "./../styles/main";
 .home  {
     background-color: $dark-blue;
     min-height: 100vh;
