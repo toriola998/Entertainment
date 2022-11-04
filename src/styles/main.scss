@@ -1,1 +1,11 @@
-@import "./theme"
+$dark-blue: #10141E;
+$semi-dark-blue: #161D2F;
+$red: #FC4747;
+$greyish-blue: #5A698F;
+$white: #ffffff;
+
+@mixin flex($flex_position: center) {
+    justify-content: $flex_position;
+    display: flex;
+    align-items: center;
+}
