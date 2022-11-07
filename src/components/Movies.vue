@@ -25,11 +25,17 @@
 </template>
 
 <style lang="scss" scoped>
-    article  {
-        width: 47%;
-        .movie {
-            background-image: url('./../assets/thumbnails/112/regular/small.jpg');
-            margin-bottom: 1rem;
-        }
+article  {
+    width: 47%;
+    .movie {
+        background-image: url('./../assets/thumbnails/112/regular/small.jpg');
+        margin-bottom: 1rem;
     }
+}
+
+@media screen and (min-width: 700px){
+    article  { 
+        width: 30%;
+    }
+}
 </style>

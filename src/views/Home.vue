@@ -16,6 +16,8 @@
                 <div>
                     <Trending />
                     <Trending /> 
+                    <Trending />
+                    <Trending /> 
                 </div>
             </section>
 
@@ -61,7 +63,8 @@ export default defineComponent({
 
 .input-wrap {
     @include flex(unset);
-    padding: .5rem 0 1rem 0;
+    padding: .5rem 0;
+    margin-bottom: 1.5rem;
 
     &:focus-within {
         outline: 2px dashed $red;
@@ -113,6 +116,18 @@ h2, h3 {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .recommended-movies {
+        >div {
+            gap: 1.5rem;
+        }
+    }
+
+    h2, h3 {
+        font-size: 1.56rem;
     }
 }
 </style>

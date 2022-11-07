@@ -62,8 +62,8 @@
 
         button {
             background: #10141E;
-            mix-blend-mode: normal;
-            opacity: 0.5;
+            // mix-blend-mode: normal;
+            // opacity: 0.5;
             height: 2rem;
             width: 2rem;
             border-radius: 15px;

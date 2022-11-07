@@ -46,4 +46,10 @@ export default defineComponent({
             left: 1rem;
         }
     }
+@media screen and (min-width: 720px){
+    .trending {
+        min-width: 30rem;
+        height: 14rem;
+    }
+}
 </style>
