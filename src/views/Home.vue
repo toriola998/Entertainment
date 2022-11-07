@@ -121,6 +121,8 @@ h2, h3 {
 
 @media screen and (min-width: 700px){
     .recommended-movies {
+        h2 { margin: 2rem 0;}
+
         >div {
             gap: 1.5rem;
         }
@@ -128,6 +130,10 @@ h2, h3 {
 
     h2, h3 {
         font-size: 1.56rem;
+    }
+
+    .input-wrap {
+        width: 40%;
     }
 }
 </style>

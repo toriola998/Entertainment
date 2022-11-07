@@ -53,7 +53,6 @@ export default defineComponent({
 }
 
 .icon-nav {
-
     button:nth-child(2){
         margin: 0 1.1rem;
     }
@@ -71,5 +70,15 @@ export default defineComponent({
             border-radius: 20px;
         }
     }
+
+    .icon-nav {
+    button:nth-child(2){
+        margin: 0 1.8rem;
+    }
+
+    button:nth-child(3) {
+        margin-right: 1.8rem;
+    }
+}
 }
 </style>

@@ -35,7 +35,7 @@ article  {
 
 @media screen and (min-width: 700px){
     article  { 
-        width: 30%;
+        width: 220px;
     }
 }
 </style>
