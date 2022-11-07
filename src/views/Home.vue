@@ -13,7 +13,10 @@
 
             <section aria-label="trending" class="trend-wrap">
                 <h1 id="trending">Trending</h1>
-                <Trending />
+                <div>
+                    <Trending />
+                    <Trending />
+                </div>
             </section>
         </main>
     </div>
@@ -72,7 +75,20 @@ h1, h2 {
     color: #fff;
 }
 
-.trend-wrap > article{
-    margin-top: 2rem;
-}
+.trend-wrap{
+    >div {
+        display: flex;
+        overflow-x: scroll;
+        -ms-overflow-style: none; // for Internet Explorer, Edge
+        scrollbar-width: none; // for Firefox
+    
+        &::-webkit-scrollbar {
+            display:none; // for Chrome, Safari and Opera
+        }
+        
+        >div {
+            margin-right: 1rem;
+        }
+    }
+ }
 </style>
