@@ -1,26 +1,34 @@
 <template>
     <div class="home"> 
         <TheNavBar />
-        <div class="home-inner">
+        <main class="home-inner">
             <div class="input-wrap">
                 <img src="@/assets/icon-search.svg" 
                     alt="" 
                     role="presentation" 
-                    height="20" />
+                    height="20"
+                    width="20" />
                 <input placeholder="Search for movies or TV series" type="text" />
             </div>
-        </div>
+
+            <section aria-label="trending" class="trend-wrap">
+                <h1 id="trending">Trending</h1>
+                <Trending />
+            </section>
+        </main>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheNavBar from '@/components/TheNavBar.vue'; // @ is an alias to /src
+import Trending from '@/components/Trending.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
     TheNavBar,
+    Trending
   },
 });
 </script>
@@ -31,14 +39,15 @@ export default defineComponent({
     background-color: $dark-blue;
     min-height: 100vh;
     width:  100vw;
-
-    .home-inner { padding: 1rem; }
+    .home-inner { 
+        padding: 1rem; 
+    }
 }
 
 .input-wrap {
     @include flex(unset);
-    padding: .3rem 0;
-    
+    padding: .6rem 0 1.5rem 0;
+
     &:focus-within {
         outline: 2px dashed $red;
     }
@@ -55,5 +64,15 @@ export default defineComponent({
         color: #fff;
         opacity: 0.5;
     }
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.trend-wrap > article{
+    margin-top: 2rem;
 }
 </style>
