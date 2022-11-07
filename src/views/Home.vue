@@ -12,11 +12,16 @@
             </div>
 
             <section aria-label="trending" class="trend-wrap">
-                <h1 id="trending">Trending</h1>
+                <h2 id="trending">Trending</h2>
                 <div>
                     <Trending />
-                    <Trending />
+                    <Trending /> 
                 </div>
+            </section>
+
+            <section aria-label="recommended-movies" class="trend-wrap">
+                <h2 id="recommended-movies">Recommended for you</h2>
+                <Movies />
             </section>
         </main>
     </div>
@@ -26,18 +31,19 @@
 import { defineComponent } from 'vue';
 import TheNavBar from '@/components/TheNavBar.vue'; // @ is an alias to /src
 import Trending from '@/components/Trending.vue';
+import Movies from '@/components/Movies.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
     TheNavBar,
-    Trending
+    Trending,
+    Movies
   },
 });
 </script>
 
 <style lang="scss" scoped>
-
 .home  {
     background-color: $dark-blue;
     min-height: 100vh;
@@ -69,7 +75,7 @@ export default defineComponent({
     }
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-size: 1.5rem;
     font-weight: 300;
     color: #fff;
