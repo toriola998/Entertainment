@@ -33,7 +33,7 @@
     .movies{
         h3 {
             font-weight: 500;
-            font-size: 1.2rem;
+            font-size: 1.05rem;
         }
 
         h3, p {
@@ -48,13 +48,13 @@
             span:nth-child(2)::after {
                 content: "";
                 display: inline-flex;
-                height: .3rem;
-                width: .3rem;
+                height: .25rem;
+                width: .25rem;
                 background: #FFFFFF;
                 mix-blend-mode: normal;
                 opacity: 0.5;
-                border-radius: 20px;
-                margin: 0 .7rem;
+                border-radius: 25px;
+                margin: 0 .4rem;
             }
         }
 

@@ -19,9 +19,15 @@
                 </div>
             </section>
 
-            <section aria-label="recommended-movies" class="trend-wrap">
+            <section aria-label="recommended-movies" class="recommended-movies">
                 <h2 id="recommended-movies">Recommended for you</h2>
-                <Movies />
+                <div>
+                    <Movies />
+                    <Movies />
+                    <Movies />
+                    <Movies />
+                    <Movies />
+                </div>
             </section>
         </main>
     </div>
@@ -55,7 +61,7 @@ export default defineComponent({
 
 .input-wrap {
     @include flex(unset);
-    padding: .6rem 0 1.5rem 0;
+    padding: .5rem 0 1rem 0;
 
     &:focus-within {
         outline: 2px dashed $red;
@@ -66,6 +72,8 @@ export default defineComponent({
         padding-left: 1rem;
         color: #fff;
         outline: 0;
+        font-size: 1.1rem;
+        font-weight: 300;
     }
 
     input::placeholder {
@@ -75,8 +83,8 @@ export default defineComponent({
     }
 }
 
-h1, h2, h3 {
-    font-size: 1.5rem;
+h2, h3 {
+    font-size: 1.4rem;
     font-weight: 300;
     color: #fff;
 }
@@ -96,5 +104,15 @@ h1, h2, h3 {
             margin-right: 1rem;
         }
     }
- }
+}
+
+.recommended-movies {
+    h2 { margin: 1.5rem 0;}
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
 </style>

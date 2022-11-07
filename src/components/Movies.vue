@@ -6,7 +6,7 @@
                     src="@/assets/icon-bookmark-empty.svg" 
                     alt="Bookmark this movie" />
             </button>
-        </div>
+        </div> 
         <div>
             <p class="movie-info">
                 <span>2019</span>
@@ -26,9 +26,10 @@
 
 <style lang="scss" scoped>
     article  {
+        width: 47%;
         .movie {
             background-image: url('./../assets/thumbnails/112/regular/small.jpg');
-            
+            margin-bottom: 1rem;
         }
     }
 </style>
