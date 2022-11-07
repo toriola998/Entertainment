@@ -7,18 +7,18 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        font-family: 'Outfit', sans-serif;
     }
 
     button,
     input {
         background: none;
-        //outline: 1px dashed $red;
         border: 0;
-
-        &:focus {
-            outline: 2px dashed $red;
-        }
     }
+
+    button:focus {
+        outline: 2px dashed $red;
+    } 
 </style>
 
 <script lang="ts">
