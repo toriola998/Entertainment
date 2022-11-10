@@ -9,27 +9,14 @@
             <input placeholder="Search for movies or TV series" type="text" />
         </div>
 
-        <section aria-label="trending" class="trend-wrap">
-            <h2 id="trending">Trending</h2>
-            <div>
-                <Trending />
-                <Trending /> 
-                <Trending />
-                <Trending />
-                <Trending /> 
-                <Trending />
-                <Trending /> 
-            </div>
-        </section>
-
         <section aria-label="recommended-movies" class="recommended-movies">
             <h2 id="recommended-movies">Recommended for you</h2>
             <div>
-                <Recommend />
-                <Recommend />
-                <Recommend />
-                <Recommend />
-                <Recommend />
+                <Movies />
+                <Movies />
+                <Movies />
+                <Movies />
+                <Movies />
             </div>
         </section>
     </main>
@@ -37,20 +24,28 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Trending from '@/components/Trending.vue';
-import Recommend from '@/components/Recommend.vue';
+// import TheNavBar from '@/components/TheNavBar.vue'; // @ is an alias to /src
+import Movies from '@/components/Recommend.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    Trending,
-    Recommend
+  //  TheNavBar,
+    Movies
   },
 });
 </script>
 
 <style lang="scss" scoped>
-
+.home  {
+    background-color: $dark-blue;
+    min-height: 100vh;
+    // width:  100vw;
+    .home-inner { 
+        padding: 1rem; 
+        overflow-x: hidden;
+    }
+}
 
 .input-wrap {
     @include flex(unset);
@@ -130,6 +125,14 @@ h2, h3 {
 }
 
 @media screen and (min-width: 1024px){ 
+    .home > div {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+    }
+
     .input-wrap input::placeholder {
         font-size: 1.2rem;
     }

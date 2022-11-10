@@ -1,5 +1,8 @@
 <template>
-    <router-view/>
+    <div class="home">
+        <the-nav-bar></the-nav-bar>
+        <router-view/>
+    </div>
 </template>
 
 <style lang="scss">
@@ -19,6 +22,16 @@
     button:focus {
         outline: 2px dashed $red;
     } 
+
+    .home  {
+        background-color: $dark-blue;
+        min-height: 100vh;
+        // width:  100vw;
+        .home-inner { 
+            padding: 1rem; 
+            overflow-x: hidden;
+        }
+    }
 
     .trending,
     article .movie {
@@ -88,18 +101,30 @@
     }
 @media screen and (min-width: 1024px){ 
     .trending h3 {
-            font-size: 1.3rem;
-        }
+        font-size: 1.3rem;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+    }
 }
 </style>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import TheNavBar from '@/components/TheNavBar.vue';
 
 export default defineComponent({
     name: 'App',
     props: {
         // msg: String,
     },
+    components: {
+        TheNavBar
+    }
 });
 </script>
