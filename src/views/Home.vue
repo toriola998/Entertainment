@@ -1,37 +1,42 @@
 <template>
     <div class="home"> 
-        <TheNavBar />
-        <main class="home-inner">
-            <div class="input-wrap">
-                <img src="@/assets/icon-search.svg" 
-                    alt="" 
-                    role="presentation" 
-                    height="20"
-                    width="20" />
-                <input placeholder="Search for movies or TV series" type="text" />
-            </div>
-
-            <section aria-label="trending" class="trend-wrap">
-                <h2 id="trending">Trending</h2>
-                <div>
-                    <Trending />
-                    <Trending /> 
-                    <Trending />
-                    <Trending /> 
+        <div>
+            <TheNavBar />
+            <main class="home-inner">
+                <div class="input-wrap">
+                    <img src="@/assets/icon-search.svg" 
+                        alt="" 
+                        role="presentation" 
+                        height="20"
+                        width="20" />
+                    <input placeholder="Search for movies or TV series" type="text" />
                 </div>
-            </section>
 
-            <section aria-label="recommended-movies" class="recommended-movies">
-                <h2 id="recommended-movies">Recommended for you</h2>
-                <div>
-                    <Movies />
-                    <Movies />
-                    <Movies />
-                    <Movies />
-                    <Movies />
-                </div>
-            </section>
-        </main>
+                <section aria-label="trending" class="trend-wrap">
+                    <h2 id="trending">Trending</h2>
+                    <div>
+                        <Trending />
+                        <Trending /> 
+                        <Trending />
+                        <Trending />
+                        <Trending /> 
+                        <Trending />
+                        <Trending /> 
+                    </div>
+                </section>
+
+                <section aria-label="recommended-movies" class="recommended-movies">
+                    <h2 id="recommended-movies">Recommended for you</h2>
+                    <div>
+                        <Movies />
+                        <Movies />
+                        <Movies />
+                        <Movies />
+                        <Movies />
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 </template>
 
@@ -55,9 +60,10 @@ export default defineComponent({
 .home  {
     background-color: $dark-blue;
     min-height: 100vh;
-    width:  100vw;
+    // width:  100vw;
     .home-inner { 
         padding: 1rem; 
+        overflow-x: hidden;
     }
 }
 
@@ -98,6 +104,7 @@ h2, h3 {
         overflow-x: scroll;
         -ms-overflow-style: none; // for Internet Explorer, Edge
         scrollbar-width: none; // for Firefox
+        // max-width: 1200px;
     
         &::-webkit-scrollbar {
             display:none; // for Chrome, Safari and Opera
@@ -134,6 +141,14 @@ h2, h3 {
 
     .input-wrap {
         width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px){ 
+    .home > div {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
     }
 }
 </style>

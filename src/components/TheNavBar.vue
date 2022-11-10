@@ -72,13 +72,33 @@ export default defineComponent({
     }
 
     .icon-nav {
-    button:nth-child(2){
-        margin: 0 1.8rem;
-    }
+        button:nth-child(2){
+            margin: 0 1.8rem;
+        }
 
-    button:nth-child(3) {
-        margin-right: 1.8rem;
+        button:nth-child(3) {
+            margin-right: 1.8rem;
+        }
     }
 }
+
+@media screen and (min-width: 1000px){  
+    .nav-bar >div {  
+        flex-direction: column;
+        width: 5rem;
+        height: 100vh; 
+        padding: 1rem 1.7rem; 
+    }
+
+    .icon-nav {
+        margin-top: -15rem;
+        button:nth-child(2){
+            margin: 2rem 0;
+        }
+
+        button:nth-child(3) {
+            margin: 0 0 2rem 0;
+        }
+    }
 }
 </style>
