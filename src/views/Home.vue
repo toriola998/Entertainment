@@ -4,24 +4,24 @@
         <section aria-label="trending" class="trend-wrap">
             <h2 id="trending">Trending</h2>
             <div>
-                <Trending />
-                <Trending /> 
-                <Trending />
-                <Trending />
-                <Trending /> 
-                <Trending />
-                <Trending /> 
+                <Trending v-for="movie in movieList" :key="movie.title"
+                     :movieCategory="movie.category"
+                    :movieRating="movie.rating"
+                    :movieYear="movie.year"
+                    :movieTitle="movie.title"  
+                    >   
+                </Trending>
             </div>
         </section>
 
         <section aria-label="recommended-movies" class="recommended-movies">
             <h2 id="recommended-movies">Recommended for you</h2>
             <div>
-                <Recommend />
-                <Recommend />
-                <Recommend />
-                <Recommend />
-                <Recommend />
+                <Recommend v-for="movie in movieList" :key="movie.title"
+                     :movieCategory="movie.category"
+                    :movieRating="movie.rating"
+                    :movieYear="movie.year"
+                    :movieTitle="movie.title" />
             </div>
         </section>
     </main>
@@ -51,7 +51,12 @@ export default defineComponent({
         }),
         movieList() {
             return JSON.parse(JSON.stringify(this.movie))
-        } 
+        },
+        // trendingList() {
+        //     this.movieList.filter(movie : any  => {
+        //         return movie.isTrending === true
+        //     });
+        // } 
     },
     mounted() {
         console.log(this.movieList)
