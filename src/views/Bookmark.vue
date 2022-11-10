@@ -1,16 +1,16 @@
 <template>
   <main class="home-inner">
     <SearchInput placeholder="Search for bookmarked movies" />
-      <section aria-label="bookmarked-movies" class="recommended-movies">
-          <h2 id="bookmarked-movies">Bookmarked Movies</h2>
-          <div>
-              <Movies />
-              <Movies />
-              <Movies />
-              <Movies />
-              <Movies />
-          </div>
-      </section>
+    <section aria-label="bookmarked-movies" class="recommended-movies">
+        <h2 id="bookmarked-movies">Bookmarked Movies</h2>
+        <div>
+            <Movies />
+            <Movies />
+            <Movies />
+            <Movies />
+            <Movies />
+        </div>
+    </section>
   </main>
 </template>
 
