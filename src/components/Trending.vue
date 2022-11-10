@@ -9,30 +9,32 @@
         </button>
         <div>
             <p class="movie-info">
-                <span>2019</span>
+                <span>{{ movieYear}}</span>
                 <span>
                     <img src="@/assets/icon-category-movie.svg" 
                         alt=""
                         role="presentation" 
                     />
-                    Movie
+                    {{ movieCategory }}
                 </span>
-                <span>PG</span>
+                <span>{{ movieRating }}</span>
             </p>
-            <h3>Beyond Earth</h3>
+            <h3>{{ movieTitle }}</h3>
         </div>
     </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-// import TheNavBar from '@/components/TheNavBar.vue'; // @ is an alias to /src
 
 export default defineComponent({
-  name: 'Home',
-  components: {
-   // TheNavBar,
-  },
+    name: 'Home',
+    props: {
+        movieYear: Number,
+        movieCategory: String,
+        movieRating : String,
+        movieTitle : String
+    }
 });
 </script>
 
