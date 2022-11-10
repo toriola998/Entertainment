@@ -20,7 +20,7 @@
     }
 
     button:focus {
-        outline: 2px dashed $red;
+        outline: 1px dashed $red;
     } 
 
     .home  {
@@ -33,11 +33,14 @@
         }
     }
 
-    .trending,
-    article .movie {
+    .trending{
         background-repeat: no-repeat;
         background-size: cover;
         height: 12rem;
+    }
+
+    .trending,
+    article .movie  {
         position: relative;
         border-radius: 15px;
     }

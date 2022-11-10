@@ -1,14 +1,15 @@
 <template>
     <article class="movies">
-        <div class="movie">
-            <button>
-                <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
-                <path 
-                    d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z" 
-                    stroke="#FFF" stroke-width="1.5" fill="none"/>
-                </svg>
-            </button>
-        </div> 
+        <img 
+            :src="require(`@/assets/${movieCover}`)"
+            alt="" class="movie" />
+        <button>
+            <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
+            <path 
+                d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z" 
+                stroke="#FFF" stroke-width="1.5" fill="none"/>
+            </svg>
+        </button>
         <div>
             <p class="movie-info">
                 <span>{{ movieYear }}</span>
@@ -32,32 +33,55 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'Home',
     props: {
-        movieYear: Number,
-        movieCategory: String,
-        movieRating : String,
-        movieTitle : String
+        movieYear: { 
+            type: Number, 
+            required: true, 
+            default: 2019, 
+        },
+        movieCategory: { 
+            type: String, 
+            required: true, 
+            default: '' 
+        },
+        movieRating : { 
+            type: String, 
+            required: true, 
+            default: '' 
+        },
+        movieTitle : { 
+            type: String, 
+            required: true, 
+            default: '' 
+        },
+        movieCover: { 
+            type: String, 
+            // required: true, 
+            // default: '' 
+        },
     }
 });
 </script>
 
 <style lang="scss" scoped>
 article  {
-    width: 47%;
+    position: relative;
     .movie {
-        background-image: url('./../assets/thumbnails/112/regular/small.jpg');
         margin-bottom: 1rem;
+        width: 100%;
+        height: 8.5rem;
+        object-fit: cover;
     }
 }
 
 @media screen and (min-width: 700px){
-    article  { 
-        width: 220px;
+    article  .movie { 
+        height: 12rem;
     }
 }
 
-@media screen and (min-width: 1200px){
-    article  { 
-        width: 280px;
-    }
-}
+// @media screen and (min-width: 1200px){
+//     article  .movie { 
+//         width: 280px;
+//     }
+// }
 </style>

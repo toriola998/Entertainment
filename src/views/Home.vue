@@ -5,7 +5,7 @@
             <h2 id="trending">Trending</h2>
             <div>
                 <Trending v-for="movie in movieList" :key="movie.title"
-                     :movieCategory="movie.category"
+                    :movieCategory="movie.category"
                     :movieRating="movie.rating"
                     :movieYear="movie.year"
                     :movieTitle="movie.title"  
@@ -14,14 +14,17 @@
             </div>
         </section>
 
+        <!-- :image="`url(${movie.thumbnail.regular.small})`" -->
         <section aria-label="recommended-movies" class="recommended-movies">
             <h2 id="recommended-movies">Recommended for you</h2>
-            <div>
+            <div class="inner-recomend">
                 <Recommend v-for="movie in movieList" :key="movie.title"
                      :movieCategory="movie.category"
                     :movieRating="movie.rating"
                     :movieYear="movie.year"
-                    :movieTitle="movie.title" />
+                    :movieTitle="movie.title" 
+                    :movieCover="movie.thumbnail.regular.small"
+                    />
             </div>
         </section>
     </main>

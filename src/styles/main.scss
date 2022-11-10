@@ -26,7 +26,7 @@ $white: #ffffff;
     margin-bottom: 1.5rem;
 
     &:focus-within {
-        outline: 2px dashed $red;
+        outline: 1px dashed $red;
     }
 
     input {
@@ -72,10 +72,10 @@ h2, h3 {
 .recommended-movies {
     h2 { margin: 1.5rem 0;}
 
-    >div {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+    .inner-recomend {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1.5rem;
     }
 }
 
@@ -83,8 +83,8 @@ h2, h3 {
     .recommended-movies {
         h2 { margin: 2rem 0;}
 
-        >div {
-            gap: 1.5rem;
+        .inner-recomend {
+            grid-template-columns: auto auto auto;
         }
     }
 
@@ -108,5 +108,13 @@ h2, h3 {
 
     .input-wrap input::placeholder {
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1200px){ 
+ .recommended-movies {
+        .inner-recomend {
+            grid-template-columns: auto auto auto auto;
+        }
     }
 }
