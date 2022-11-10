@@ -65,22 +65,31 @@
             background: #10141E;
             // mix-blend-mode: normal;
             // opacity: 0.5;
-            height: 2rem;
-            width: 2rem;
+            height: 1.5rem;
+            width: 1.5rem;
             border-radius: 15px;
             position: absolute;
             right: .7rem;
             top: .7rem;
-            @include flex();
+            @include flex;
+
+            &:hover {
+                background: #fff;   
+            } 
+
+            svg:hover path {
+                fill: #000;
+            }
+            
+            svg:active path {
+                fill: #fff;
+            }
         }
     }
 @media screen and (min-width: 1024px){ 
     .trending h3 {
             font-size: 1.3rem;
         }
-    // .movies h3 {
-
-    // }
 }
 </style>
 

@@ -68,14 +68,6 @@ export default defineComponent({
         @include flex($flex_position: space-between); 
     }
 }
- 
-svg:hover path {
-    fill: $red;
-}
-
-svg:active path {
-    fill: #fff;
-}
 
 .icon-nav {
     a { display: block; }
@@ -85,6 +77,14 @@ svg:active path {
 
     a:nth-child(3) {
         margin-right: 1.1rem;
+    }
+
+    svg:hover path {
+    fill: $red;
+    }
+    
+    svg:active path {
+        fill: #fff;
     }
 }
 
