@@ -1,14 +1,6 @@
 <template>
     <main class="home-inner">
-        <div class="input-wrap">
-            <img src="@/assets/icon-search.svg" 
-                alt="" 
-                role="presentation" 
-                height="20"
-                width="20" />
-            <input placeholder="Search for movies or TV series" type="text" />
-        </div>
-
+       <SearchInput placeholder="Search for movies or Tv Series"/>
         <section aria-label="trending" class="trend-wrap">
             <h2 id="trending">Trending</h2>
             <div>
@@ -37,6 +29,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import SearchInput from '@/components/SearchInput.vue';
 import Trending from '@/components/Trending.vue';
 import Recommend from '@/components/Recommend.vue';
 
@@ -44,6 +37,7 @@ export default defineComponent({
   name: 'Home',
   components: {
     Trending,
+    SearchInput,
     Recommend
   },
 });
