@@ -24,7 +24,7 @@
     article .movie {
         background-repeat: no-repeat;
         background-size: cover;
-        height: 10rem;
+        height: 12rem;
         position: relative;
         border-radius: 15px;
     }
@@ -61,6 +61,7 @@
         span img { margin-right: .4rem; }
 
         button {
+            cursor: pointer;
             background: #10141E;
             // mix-blend-mode: normal;
             // opacity: 0.5;
@@ -73,6 +74,14 @@
             @include flex();
         }
     }
+@media screen and (min-width: 1024px){ 
+    .trending h3 {
+            font-size: 1.3rem;
+        }
+    // .movies h3 {
+
+    // }
+}
 </style>
 
 <script lang="ts">

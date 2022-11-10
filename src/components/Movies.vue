@@ -38,4 +38,10 @@ article  {
         width: 220px;
     }
 }
+
+@media screen and (min-width: 1200px){
+    article  { 
+        width: 280px;
+    }
+}
 </style>

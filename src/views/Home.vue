@@ -149,6 +149,12 @@ h2, h3 {
         display: grid;
         grid-template-columns: auto auto;
         width: 100%;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .input-wrap input::placeholder {
+        font-size: 1.2rem;
     }
 }
 </style>
