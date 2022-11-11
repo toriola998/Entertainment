@@ -3,12 +3,14 @@
         <SearchInput placeholder="Search for movies" />
         <section aria-label="movies" class="recommended-movies">
             <h2 id="movies">Movies</h2>
-            <div>
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
+            <div class="inner-recomend">
+                <Recommend v-for="movie in movieList" :key="movie.title"
+                    :movieCategory="movie.category"
+                    :movieRating="movie.rating"
+                    :movieYear="movie.year"
+                    :movieTitle="movie.title" 
+                    :movieCover="movie.thumbnail.regular.small"
+                />
             </div>
         </section>
     </main>
@@ -16,15 +18,31 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Movies from '@/components/Recommend.vue';
 import SearchInput from '@/components/SearchInput.vue';
+import Recommend from '@/components/Recommend.vue';
+import { mapState } from 'vuex'
 
 export default defineComponent({
-  name: 'Home',
-  components: {
-    Movies,
-    SearchInput
-},
+    name: 'Home',
+    components: {
+        SearchInput,
+        Recommend
+    },
+    methods: {
+        
+    },
+    computed: {
+        ...mapState({
+            movie: (state : any) => state.movie,
+        }),
+
+        movieList() {
+            return JSON.parse(JSON.stringify(this.movie))
+        },
+    },
+    mounted() {
+        console.log(this.movieList)
+    }
 });
 </script>
 

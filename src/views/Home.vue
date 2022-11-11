@@ -49,17 +49,11 @@ export default defineComponent({
     },
     computed: {
         ...mapState({
-            //return this.$store.state.da
             movie: (state : any) => state.movie,
         }),
         movieList() {
             return JSON.parse(JSON.stringify(this.movie))
         },
-        // trendingList() {
-        //     this.movieList.filter(movie : any  => {
-        //         return movie.isTrending === true
-        //     });
-        // } 
     },
     mounted() {
         console.log(this.movieList)
