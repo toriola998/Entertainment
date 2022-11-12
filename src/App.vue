@@ -45,6 +45,11 @@
         border-radius: 15px;
     }
 
+    article .movie {
+        width: 450px;
+        height: 200px;
+    }
+
     .trending,
     .movies{
         h3 {
@@ -113,6 +118,10 @@
         width: 100%;
         max-width: 1400px;
         margin: auto;
+    }
+
+    article .movie {
+        height: 220px;
     }
 }
 </style>

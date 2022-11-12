@@ -8,7 +8,8 @@
                     :movieCategory="movie.category"
                     :movieRating="movie.rating"
                     :movieYear="movie.year"
-                    :movieTitle="movie.title"  
+                    :movieTitle="movie.title" 
+                    :movieCover="movie.thumbnail.regular.small" 
                     >   
                 </Trending>
             </div>

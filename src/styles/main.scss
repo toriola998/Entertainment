@@ -57,6 +57,7 @@ h2, h3 {
         overflow-x: scroll;
         -ms-overflow-style: none; // for Internet Explorer, Edge
         scrollbar-width: none; // for Firefox
+        padding-bottom: 3rem;
         // max-width: 1200px;
     
         &::-webkit-scrollbar {

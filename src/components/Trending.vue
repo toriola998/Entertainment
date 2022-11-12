@@ -1,5 +1,9 @@
 <template>
     <article class="trending">
+        <img 
+            :src="require(`@/assets/${movieCover}`)"
+            alt="" class="movie" 
+        />
         <button>
             <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
                 <path 
@@ -30,18 +34,37 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'Home',
     props: {
-        movieYear: Number,
-        movieCategory: String,
-        movieRating : String,
-        movieTitle : String
+        movieYear: { 
+            type: Number, 
+            required: true, 
+            default: 2019, 
+        },
+        movieCategory: { 
+            type: String, 
+            required: true, 
+            default: '' 
+        },
+        movieRating : { 
+            type: String, 
+            required: true, 
+            default: '' 
+        },
+        movieTitle : { 
+            type: String, 
+            required: true, 
+            default: '' 
+        },
+        movieCover: { 
+            type: String, 
+            // required: true, 
+            // default: '' 
+        },
     }
 });
 </script>
 
 <style lang="scss" scoped>
     .trending {
-        background-image: url('./../assets/thumbnails/112/regular/small.jpg');
-        min-width: 18rem;
         margin: 2rem 1rem 0 0;
 
         >div {
@@ -50,10 +73,4 @@ export default defineComponent({
             left: 1rem;
         }
     }
-@media screen and (min-width: 720px){
-    .trending {
-        min-width: 470px;
-        height: 13rem;
-    }
-}
 </style>
