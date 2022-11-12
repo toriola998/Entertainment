@@ -4,13 +4,15 @@
         <section aria-label="movies" class="recommended-movies">
             <h2 id="movies">Movies</h2>
             <div class="inner-recomend">
-                <Recommend v-for="movie in movieList" :key="movie.title"
-                    :movieCategory="movie.category"
-                    :movieRating="movie.rating"
-                    :movieYear="movie.year"
-                    :movieTitle="movie.title" 
-                    :movieCover="movie.thumbnail.regular.small"
-                />
+                <div v-for="movie in movieList" :key="movie.title">
+                    <Recommend v-if="movie.category === 'Movie'"
+                        :movieCategory="movie.category"
+                        :movieRating="movie.rating"
+                        :movieYear="movie.year"
+                        :movieTitle="movie.title" 
+                        :movieCover="movie.thumbnail.regular.small"
+                    />
+                </div>
             </div>
         </section>
     </main>

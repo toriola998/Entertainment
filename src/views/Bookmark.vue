@@ -4,14 +4,16 @@
     <section aria-label="bookmarked-movies" class="recommended-movies">
         <h2 id="bookmarked-movies">Bookmarked Movies</h2>
         <div class="inner-recomend">
-            <Recommend v-for="movie in movieList" :key="movie.title"
-                :movieCategory="movie.category"
-                :movieRating="movie.rating"
-                :movieYear="movie.year"
-                :movieTitle="movie.title" 
-                :movieCover="movie.thumbnail.regular.small"
-            />
+            <div v-for="movie in movieList" :key="movie.title">
+                <Recommend
+                    :movieCategory="movie.category"
+                    :movieRating="movie.rating"
+                    :movieYear="movie.year"
+                    :movieTitle="movie.title" 
+                    :movieCover="movie.thumbnail.regular.small"
+                />
             </div>
+        </div>
     </section>
   </main>
 </template>

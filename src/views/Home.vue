@@ -4,14 +4,16 @@
         <section aria-label="trending" class="trend-wrap">
             <h2 id="trending">Trending</h2>
             <div>
-                <Trending v-for="movie in movieList" :key="movie.title"
-                    :movieCategory="movie.category"
-                    :movieRating="movie.rating"
-                    :movieYear="movie.year"
-                    :movieTitle="movie.title" 
-                    :movieCover="movie.thumbnail.regular.small" 
-                    >   
-                </Trending>
+                <div v-for="movie in movieList" :key="movie.title">
+                    <Trending v-if="movie.isTrending === true"
+                        :movieCategory="movie.category"
+                        :movieRating="movie.rating"
+                        :movieYear="movie.year"
+                        :movieTitle="movie.title" 
+                        :movieCover="movie.thumbnail.regular.small" 
+                        >   
+                    </Trending>
+                </div>
             </div>
         </section>
 
@@ -40,6 +42,11 @@ import { mapState } from 'vuex'
 
 export default defineComponent({
     name: 'Home',
+    data() {
+        return {
+            trender: [],
+        }
+    },
     components: {
         Trending,
         SearchInput,
@@ -52,12 +59,26 @@ export default defineComponent({
         ...mapState({
             movie: (state : any) => state.movie,
         }),
+
         movieList() {
             return JSON.parse(JSON.stringify(this.movie))
         },
+
+        // trendingList() {
+        //      return this.movieList.forEach((obj : any) : any => {
+        //         // const wantedArr = Object.entries(obj)
+        //         // console.log(wantedArr)
+                
+        //         // if(wantedArr[6][1] === true) {
+        //         //     this.trendingList.push(obj);
+        //         // }
+        //         return obj  
+        //     }) 
+        // }
     },
     mounted() {
-        console.log(this.movieList)
+        console.log(this.movieList);
+        // console.log(this.trendingList)
     }
 });
 </script>
